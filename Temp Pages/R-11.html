@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Speaker Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Speaker Registration Form</h1>
+    <form>
+      <label for="linkedin">Linkedin:</label>
+      <input type="text" id="linkedin" name="linkedin" required>
+      <label for="github">Github:</label>
+      <input type="text" id="github" name="github" required>
+      <label for="degree">Bachelor's Degree:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <label for="email">Email:</label>
+      <input type="text" id="organization" name="organization" required>
+
+      <label for="institute">Institute:</label>
+<select id="institute" name="institute">
+  <option value="">Select an institute</option>
+  <option value="Institute A">Institute A</option>
+  <option value="Institute B">Institute B</option>
+  <option value="Institute C">Institute C</option>
+  <option value="Institute D">Institute D</option>
+  <option value="Other">Other</option>
+</select>
+<label for="records">Professional Records at list 3:</label>
+      <textarea id="records" name="records" rows="4" cols="50" required></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

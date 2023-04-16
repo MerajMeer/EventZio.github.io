@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800;900&display=swap');
+
+/*
+
+
+ CSS HEX 
+--violet-jtc: #4D183Fff;
+--federal-blue: #051156ff;
+--resolution-blue: #112D8Eff;
+--oxford-blue: #0E0A2Eff;
+--amaranth-purple: #A80237ff;
+
+*/
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.chat-bot{
+    position: absolute;
+    top:60%;
+    left:70%;
+    z-index: 10;
+    position: fixed;
+}
+
+.hero-sec{
+
+    background-image: url("images/bglandingpage1.jpg");
+    background-size: cover;
+    background-position:bottom;
+    background-position: fixed;
+
+
+
+}
+
+.nav-btn{
+    text-transform: uppercase;
+}

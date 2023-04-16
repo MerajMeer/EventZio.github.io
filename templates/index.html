@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot Demo</title>
+
+    <!-- CSS Linking -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Linking -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- JS Linking -->
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <h1 class="flex col-span-2 text-black ">ChatBot</h1>
+    <form method="POST" action="/chatbot">
+       
+       <input type="text" name="message" placeholder="Type your message...">
+       <button class="" type="submit">Send</button>
+    </form>
+    <div id="response"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('form').submit(function(event) {
+            event.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/chatbot',
+                data: $('form').serialize(),
+                success: function(response) {
+                    $('#response').append('<p><strong>You:</strong> ' + $('input[name=message]').val() + '</p>');
+                    $('#response').append('<p><strong>Chatbot:</strong> ' + response + '</p>');
+                    $('input[name=message]').val('');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
